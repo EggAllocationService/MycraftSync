@@ -16,7 +16,14 @@ namespace MycraftSync
             {
                 return;
             }
+            if (!textBox1.Text.EndsWith("/"))
+            {
+                MessageBox.Show("The URL must end with a /", "Alert!", MessageBoxButtons.OK);
+                return;
+            }
+
             Config.AddSource(textBox1.Text);
+            Close();
             
         }
     }

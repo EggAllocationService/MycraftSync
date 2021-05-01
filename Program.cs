@@ -16,7 +16,9 @@ namespace MycraftSync
         [STAThread]
         static void Main()
         {
-            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Config.Init();
+            Utils.Updater.Setup();
+            Utils.MinecraftLauncher.Load();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainWindow());

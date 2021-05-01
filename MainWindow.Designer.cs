@@ -29,45 +29,96 @@ namespace MycraftSync
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.components = new System.ComponentModel.Container();
+            this.packBox = new System.Windows.Forms.ListBox();
             this.addButton = new System.Windows.Forms.Button();
+            this.previewWindow = new System.Windows.Forms.WebBrowser();
+            this.actionButton = new System.Windows.Forms.Button();
+            this.uninstallButton = new System.Windows.Forms.Button();
+            this.configBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.configBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBox1
+            // packBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(12, 47);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(232, 319);
-            this.listBox1.TabIndex = 0;
+            this.packBox.FormattingEnabled = true;
+            this.packBox.Location = new System.Drawing.Point(10, 41);
+            this.packBox.Name = "packBox";
+            this.packBox.Size = new System.Drawing.Size(199, 277);
+            this.packBox.TabIndex = 0;
+            this.packBox.SelectedIndexChanged += new System.EventHandler(this.packBox_SelectedIndexChanged);
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(12, 372);
+            this.addButton.Location = new System.Drawing.Point(10, 322);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.Size = new System.Drawing.Size(18, 20);
             this.addButton.TabIndex = 1;
-            this.addButton.Text = "button1";
+            this.addButton.Text = "+";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
+            // previewWindow
+            // 
+            this.previewWindow.AllowWebBrowserDrop = false;
+            this.previewWindow.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.previewWindow.Location = new System.Drawing.Point(240, 41);
+            this.previewWindow.MinimumSize = new System.Drawing.Size(20, 20);
+            this.previewWindow.Name = "previewWindow";
+            this.previewWindow.Size = new System.Drawing.Size(435, 277);
+            this.previewWindow.TabIndex = 2;
+            // 
+            // actionButton
+            // 
+            this.actionButton.Enabled = false;
+            this.actionButton.Location = new System.Drawing.Point(599, 355);
+            this.actionButton.Name = "actionButton";
+            this.actionButton.Size = new System.Drawing.Size(75, 23);
+            this.actionButton.TabIndex = 3;
+            this.actionButton.Text = "Placeholder";
+            this.actionButton.UseVisualStyleBackColor = true;
+            this.actionButton.Click += new System.EventHandler(this.actionButton_Click);
+            // 
+            // uninstallButton
+            // 
+            this.uninstallButton.Location = new System.Drawing.Point(518, 355);
+            this.uninstallButton.Name = "uninstallButton";
+            this.uninstallButton.Size = new System.Drawing.Size(75, 23);
+            this.uninstallButton.TabIndex = 4;
+            this.uninstallButton.Text = "Uninstall";
+            this.uninstallButton.UseVisualStyleBackColor = true;
+            this.uninstallButton.Visible = false;
+            this.uninstallButton.Click += new System.EventHandler(this.uninstallButton_Click);
+            // 
+            // configBindingSource
+            // 
+            this.configBindingSource.DataSource = typeof(MycraftSync.Config);
+            // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(686, 390);
+            this.Controls.Add(this.uninstallButton);
+            this.Controls.Add(this.actionButton);
+            this.Controls.Add(this.previewWindow);
             this.Controls.Add(this.addButton);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.packBox);
             this.Name = "MainWindow";
-            this.Text = "MainWindow";
+            this.Text = "Yeet";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainWindow_FormClosed);
+            this.Load += new System.EventHandler(this.MainWindow_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.configBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button addButton;
+        public System.Windows.Forms.ListBox packBox;
+        private System.Windows.Forms.BindingSource configBindingSource;
+        public System.Windows.Forms.Button actionButton;
+        public System.Windows.Forms.Button uninstallButton;
+        public System.Windows.Forms.WebBrowser previewWindow;
     }
 }

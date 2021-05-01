@@ -35,27 +35,26 @@ namespace MycraftSync
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 34);
+            this.textBox1.Location = new System.Drawing.Point(10, 29);
             this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "URL";
-            this.textBox1.Size = new System.Drawing.Size(404, 23);
+            this.textBox1.Size = new System.Drawing.Size(347, 20);
             this.textBox1.TabIndex = 0;
             // 
             // applyButton
             // 
-            this.applyButton.Location = new System.Drawing.Point(341, 83);
+            this.applyButton.Location = new System.Drawing.Point(292, 72);
             this.applyButton.Name = "applyButton";
-            this.applyButton.Size = new System.Drawing.Size(75, 23);
+            this.applyButton.Size = new System.Drawing.Size(64, 20);
             this.applyButton.TabIndex = 2;
-            this.applyButton.Text = "button1";
+            this.applyButton.Text = "Add";
             this.applyButton.UseVisualStyleBackColor = true;
             this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
             // 
             // AddSourceWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 118);
+            this.ClientSize = new System.Drawing.Size(367, 102);
             this.Controls.Add(this.applyButton);
             this.Controls.Add(this.textBox1);
             this.Name = "AddSourceWindow";

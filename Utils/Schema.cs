@@ -10,11 +10,16 @@ namespace MycraftSync.Utils
     {
         public string path;
         public string hash;
-        public long size;
+        public int size;
     }
     public class Manifest
     {
         public long version;
         public List<File> files;
+    }
+    public class Source
+    {
+        public string name;
+        public string baseURL;
     }
 }
