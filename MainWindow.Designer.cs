@@ -30,6 +30,7 @@ namespace MycraftSync
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.packBox = new System.Windows.Forms.ListBox();
             this.addButton = new System.Windows.Forms.Button();
             this.previewWindow = new System.Windows.Forms.WebBrowser();
@@ -90,10 +91,6 @@ namespace MycraftSync
             this.uninstallButton.Visible = false;
             this.uninstallButton.Click += new System.EventHandler(this.uninstallButton_Click);
             // 
-            // configBindingSource
-            // 
-            this.configBindingSource.DataSource = typeof(MycraftSync.Config);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,8 +101,9 @@ namespace MycraftSync
             this.Controls.Add(this.previewWindow);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.packBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
-            this.Text = "Yeet";
+            this.Text = "Mycraft Updater";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainWindow_FormClosed);
             this.Load += new System.EventHandler(this.MainWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.configBindingSource)).EndInit();
